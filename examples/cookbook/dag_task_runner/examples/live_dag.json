@@ -1,0 +1,20 @@
+{
+  "title": "Live ping",
+  "models": {
+    "LOW": "composer-2"
+  },
+  "tasks": [
+    {
+      "id": "ping-a",
+      "depends_on": [],
+      "complexity": "LOW",
+      "subtask_prompt": "Reply with exactly: pong"
+    },
+    {
+      "id": "ping-b",
+      "depends_on": [],
+      "complexity": "LOW",
+      "subtask_prompt": "Reply with exactly: pong"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencursor"
+version = "0.1.0"
+description = "Open Cursor — Python reference client for Cursor Cloud Agent REST + SSE (reverse engineered from @cursor/sdk)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "LGPL-3.0-or-later"
+license-files = ["LICENSES/LGPL-3.0-or-later.txt"]
+authors = [{ name = "Open Cursor contributors" }]
+dependencies = [
+    "httpx[http2]>=0.27",
+    "pydantic>=2.5",
+    "tree-sitter>=0.23",
+    "tree-sitter-bash>=0.23",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.24"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["opencursor*"]
+
+[tool.setuptools.package-data]
+opencursor = ["py.typed", "data/descriptors.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+    "tests/stress/.work",
+    "tests/stress/cookbook",
+    ".git",
+    ".venv",
+    "dist",
+    "build",
+    "*.egg-info",
+]

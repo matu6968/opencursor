@@ -1,0 +1,31 @@
+version = 1
+
+[[annotations]]
+path = [
+    "Makefile",
+    "pyproject.toml",
+    "opencursor/**",
+    "embeds/**",
+]
+precedence = "override"
+SPDX-FileCopyrightText = "Open Cursor contributors"
+SPDX-License-Identifier = "LGPL-3.0-or-later"
+
+[[annotations]]
+path = [
+    "examples/**",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Open Cursor contributors"
+SPDX-License-Identifier = "MIT-0"
+
+[[annotations]]
+path = [
+        "docs/**",
+        "locales/**",
+    	"README.md",
+    	".gitignore",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Open Cursor contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
